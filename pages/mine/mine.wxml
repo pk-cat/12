@@ -1,0 +1,35 @@
+<!--pages/mine/mine.wxml-->
+<view class='t'>
+  <navigator class='table' url='../login/login'>
+    <view class='word'>我的订单</view>
+    <view class='arrow' />
+  </navigator>
+  <navigator class='table' url='../login/login'>
+    <view class='word'>优惠券</view>
+    <view class='arrow' />
+  </navigator>
+  <navigator class='ta' url='../login/login'>
+    <view class='word'>影院会员卡</view>
+    <view class='arrow' />
+  </navigator>
+</view>
+<view class='t'>
+  <navigator class='table' url='../login/login'>
+    <view class='word'>想看的电影</view>
+    <view class='arrow' />
+  </navigator>
+  <navigator class='ta' url='../login/login'>
+    <view class='word'>看过的电影</view>
+    <view class='arrow' />
+  </navigator>
+</view>
+<view class='bottom'>
+  <block class="word">
+    <text>
+      ©猫眼电影客服电话:
+    </text>
+    <text>
+      1010-5335
+    </text>
+  </block>
+</view>

@@ -1,0 +1,157 @@
+/**index.wxss**/
+
+/* 导航 */
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 30rpx;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  top:0;
+  flex: none;
+  display: flex;
+  border-bottom: 1px solid #d7d7d7;
+  background: #fff;
+  align-items: center;
+}
+.leavetop{
+  margin-top:80rpx;
+}
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.navbar .item.active {
+  color: #ee4130;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #ee4130;
+}
+
+/*电影信息 */
+
+.table{
+  border: 0.2rpx solid #d7d7d7;
+}
+
+.hor {
+  display: flex;
+  flex-direction: row;
+  width: 600rpx;
+  height: 320rpx;
+  margin: 5rpx 10rpx;
+}
+
+.img {
+  display: inline-block;
+  object-fit: cover;
+  width: 160rpx;
+  height: 220rpx;
+}
+
+.tr {
+  margin: 30rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 220rpx;
+}
+
+.td {
+  width: 30%;
+  text-align: left;
+}
+
+.td2 {
+  width: 52%;
+  text-align: left;
+}
+
+.bg-g {
+  background: #fff;
+}
+
+.td1 {
+  height: 220rpx;
+  position: relative;
+  /* margin-right: 10rpx; */
+  width:40%;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.want{
+  margin-bottom: 60rpx;
+}
+.prePay {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #53b0eb;
+  color: #dffeff;
+  font-size: 30rpx;
+  margin: 0;
+}
+
+.word {
+  color: #686868;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.word1 {
+  color: #686868;
+  font-size: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/* 电影信息排列 */
+
+.name {
+  color: #ffde3b;
+  font-size: 34rpx;
+}
+
+.name2 {
+  color: #ffde3b;
+  font-size: 24rpx;
+}
+
+/* 最受欢迎 */
+
+.hotP {
+  display: inline-block;
+  width: 160rpx;
+  height: 240rpx;
+  margin: 5rpx 10rpx;
+}

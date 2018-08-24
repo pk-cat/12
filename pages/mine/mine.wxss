@@ -1,0 +1,40 @@
+/* pages/mine/mine.wxss */
+.arrow{
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  position: absolute;
+  right: 20px;
+  transform: rotate(45deg);
+   top:20px;
+}
+.table{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height:90rpx;
+  margin-left: 15rpx;
+  border-bottom: 0.2rpx solid #d7d7d7;
+}
+.ta{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height:90rpx;
+  margin-left: 15rpx;
+}
+.t{
+  display: block;
+  margin-top: 40rpx;
+  border: 0.2rpx solid #d7d7d7;
+}
+.bottom{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 40rpx;
+}
+.word{
+  font-size: 35rpx;
+}

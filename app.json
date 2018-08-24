@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/videoHall/videoHall",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/movie/movie",
+    "pages/shop/shop",
+    "pages/test/test"
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#dd403b",
+    "navigationBarTitleText": "猫眼电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#dd403b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "pages/index/img/movie2.png",
+        "selectedIconPath": "pages/index/img/movie1.png"
+      },
+      {
+        "pagePath": "pages/videoHall/videoHall",
+        "text": "影院",
+        "iconPath": "pages/index/img/v2.png",
+        "selectedIconPath": "pages/index/img/v1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/index/img/me2.png",
+        "selectedIconPath": "pages/index/img/me.png"
+      }
+    ]
+  }
+}

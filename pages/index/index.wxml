@@ -1,0 +1,124 @@
+<!--导航条-->
+<view class="navbar">
+  <!-- 定位 -->
+  <navigator url='../search/search'>
+    <text>{{location}}</text>
+  </navigator>
+  <!-- 热映待映 -->
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  <!-- 搜索 -->
+  <navigator url='../login/login'>
+    <icon type="search" size="20" color='red' />
+  </navigator>
+</view>
+<!--热映-->
+<view class='leavetop' hidden="{{currentTab!==0}}">
+  <view wx:for="{{hotArr}}" wx:key="{{item._id}}" class="table">
+    <view data-a="{{index}}" bindtap='toMovie' class="tr bg-g">
+      <view class="td">
+        <!-- 电影图 -->
+        <image alt="" class='img' src="{{ip + item.movie_image}}"></image>
+      </view>
+      <!-- 具体信息 -->
+      <view class="td2">
+        <!-- 电影名 -->
+        <view>
+          <text>{{item.movie_name}}</text>
+        </view>
+        <!-- 类型 -->
+        <view>
+          <text class='word'>{{item.movie_type}}</text>
+        </view>
+        <!-- 主演 -->
+        <view>
+          <text class='word'>{{item.movie_actor}}</text>
+        </view>
+        <!-- 上映时间 -->
+        <view>
+          <text class='word'>{{item.time}}</text>
+        </view>
+      </view>
+      <!-- 评分 -->
+      <view class="td1">
+        <view class='want' wx:if="{{item.movie_time!=2}}">
+          <text class='name'>{{item.movie_want}}</text>
+          <text class='name2'>人想看</text>
+        </view>
+        <view class='want' wx:else>
+          <text class='name'>{{item.movie_user_score}}</text>
+          <text class='name2'>分</text>
+        </view>
+        <button wx:if="{{item.movie_time!=2}}" class='prePay'>预售</button>
+        <!-- 点击购买跳转到购买页面 -->
+        <button wx:else class='prePay' data-id="{{index}}" bindtap='toShop'>购买</button>
+      </view>
+
+    </view>
+  </view>
+
+</view>
+
+<!--待映-->
+<view class='leavetop' hidden="{{currentTab!==1}}">
+  <!-- 滑动 -->
+  <scroll-view scroll-x>
+    <text>近期最受欢迎</text>
+    <view class='hor'>
+      <block wx:for="{{hot}}" wx:key="{{item._id}}">
+        <view data-a="{{index}}" bindtap='toMovie' class='hotP'>
+          <!-- 电影图 -->
+          <image alt="" class='img' src="{{ip + item.movie_image}}"></image>
+          <!-- 电影名 -->
+          <view>
+            <text class='word'>{{item.movie_name}}</text>
+          </view>
+          <view>
+            <!-- 想看人数-->
+            <text class='word1'>{{item.movie_want}}人想看</text>
+          </view>
+          <!-- <text>{{item.movie_time}}</text> -->
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+
+  <!-- 具体电影信息 -->
+  <view wx:for="{{commingArr}}" wx:key="{{item._id}}" class="table">
+    <view data-a="{{index}}" bindtap='toMovie'>
+      <!-- 上映时间 -->
+      <text>{{item.movie_time}}</text>
+      <view class="tr bg-g">
+        <view class="td">
+          <!-- 电影图 -->
+          <image alt="" class='img' src="{{ip + item.movie_image}}"></image>
+        </view>
+        <view class="td2">
+          <view>
+            <!-- 电影名 -->
+            <text>{{item.movie_name}}</text>
+          </view>
+          <view>
+            <!-- 类型 -->
+            <text class='word'>{{item.movie_type}}</text>
+          </view>
+          <view>
+            <!-- 演员 -->
+            <text class='word'>{{item.movie_actor}}</text>
+          </view>
+          <view>
+            <!-- 上映时间 -->
+            <text class='word'>{{item.time}}</text>
+          </view>
+        </view>
+        <view class="td1">
+          <view class='want'>
+            <text class='name'>{{item.movie_want}}</text>
+            <text class='name2'>人想看</text>
+          </view>
+          <button class='prePay'>预售</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+<!--pages/movie/movie.wxml-->
+<view>
+  <!-- 图片以及电影名，类型等信息 -->
+  <!-- 图片 -->
+  <view>
+    <image src="{{ip +movieData.movie_image }}"></image>
+  </view>
+  <!-- 电影名字演员 -->
+  <view>
+    <view>
+      <text>{{movieData.movie_name}}</text>
+    </view>
+    <view>
+      <text>{{movieData.movie_Ename}}</text>
+    </view>
+    <view>
+      <text>{{movieData.movie_user_score}}</text>
+    </view>
+    <view>
+      <text>{{movieData.movie_type}}</text>
+    </view>
+    <view>
+      <text>{{movieData.movie_area}}</text>
+    </view>
+    <view>
+      <text>{{movieData.movie_time}}</text>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view>
+    <text>{{movieData.movie_synopsis}}</text>
+  </view>
+  <!-- 演职人员 -->
+  <view>
+    <view>
+      <image src='{{ip + movieData.movie_director_photo}}'></image>
+      <text>{{movieData.movie_director}}</text>
+    </view>
+    <view wx:for="{{movieData.movie_actor}}" wx:key="{{index}}">
+      <text>{{item}}</text>
+    </view>
+    <view wx:for="{{movieData.stage_photo}}" wx:key="{{index}}">
+      <image src='{{ip +item}}'></image>
+      <view wx:for="{{movieData.movie_role}}" wx:key="{{index}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 剧照 -->
+  <view>
+    <view wx:for="{{movieData.movie_imgs}}" wx:key="{{index}}">
+      <image src='{{ip + item}}'></image>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view>
+    <view wx:for="{{movieData.movie_comment}}" wx:key="{{index}}">
+    <!-- 头像 -->
+      <view>
+        <image src='{{ip+item.image}}'>
+        </image>
+      </view>
+      <!-- 评论内容 -->
+      <view>
+        <text>{{item.name}}</text>
+        <text>{{item.Comment_conten}}</text>
+      </view>
+
+    </view>
+
+  </view>
+</view>
